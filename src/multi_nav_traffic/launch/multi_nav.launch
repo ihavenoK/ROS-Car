@@ -1,0 +1,65 @@
+<launch>
+  <!-- ========================================================== -->
+  <!--  Multi-Point Navigation with Traffic Light Detection       -->
+  <!--  Launches the existing navigation stack + our new node     -->
+  <!-- ========================================================== -->
+
+  <!-- 1. Existing navigation stack (map_server + AMCL + move_base) -->
+  <include file="$(find start_roscar)/launch/navigation.launch" />
+
+  <!-- 2. Multi-nav traffic light node -->
+  <node pkg="multi_nav_traffic" type="multi_nav_traffic_light_node.py"
+        name="multi_nav_traffic_light" output="screen">
+
+    <!-- YOLO model -->
+    <param name="model_path" value="$(find multi_nav_traffic)/model/best_new.pt"/>
+
+    <!-- Image gamma ( >1 darkens for outdoor bright light; 1.0 = no change) -->
+    <param name="gamma" value="1.5"/>
+
+    <!-- TF frames -->
+    <param name="camera_frame" value="camera_link"/>
+    <param name="laser_frame"  value="laser"/>
+    <param name="robot_frame"  value="base_footprint"/>
+
+    <!-- Distance thresholds -->
+    <param name="stop_distance" value="3.0"/>   <!-- start braking when red detected within this range -->
+    <param name="hold_distance" value="1.5"/>   <!-- stop exactly this far before the red light -->
+
+    <!-- LiDAR angle matching tolerance (degrees) -->
+    <param name="angle_tolerance" value="2.0"/>
+
+    <!-- === Improved params (from verified projects) === -->
+
+    <!-- YOLO confidence threshold (0.0~1.0, lower = more detections but more false positives) -->
+    <param name="confidence_threshold" value="0.5"/>
+
+    <!-- Red light entry debounce: N consecutive frames before triggering stop -->
+    <param name="red_debounce_frames" value="3"/>
+
+    <!-- LiDAR distance EMA filter window size -->
+    <param name="distance_filter_window" value="5"/>
+
+    <!-- Max velocity during red-light approach (m/s) -->
+    <param name="max_approach_vel" value="0.3"/>
+
+    <!-- Minimum creep velocity during approach (m/s) -->
+    <param name="creep_vel" value="0.05"/>
+
+    <!-- Safety margin added to hold_distance (m) -->
+    <param name="safety_margin" value="0.2"/>
+
+    <!-- Green light confirmation: N consecutive frames -->
+    <param name="green_confirm_frames" value="5"/>
+
+    <!-- Max wait time for green before timeout fallback (seconds) -->
+    <param name="red_wait_timeout" value="30.0"/>
+
+    <!-- Camera intrinsics (640x480 typical) -->
+    <param name="fx" value="400.0"/>
+    <param name="fy" value="400.0"/>
+    <param name="cx" value="320.0"/>
+    <param name="cy" value="240.0"/>
+  </node>
+
+</launch>

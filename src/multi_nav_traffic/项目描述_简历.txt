@@ -1,0 +1,10 @@
+### 多点导航与红绿灯识别小车系统
+
+基于 ROS Noetic + STM32 差速小车平台，开发了一套室外多点自主导航与视觉红绿灯识别响应系统。通过 RViz 收集路径点，move_base（TEB）顺序导航；YOLOv8 视觉检测融合 RPLidar A3 激光雷达测距，实时感知红绿灯状态，红灯前 1.5m 自动刹停，绿灯确认后恢复。
+
+核心工作
+- 独立开发完整的 ROS 功能包（573 行），含 6 状态导航状态机（IDLE→COLLECTING→NAVIGATING→STOPPING_FOR_RED→WAITING_GREEN→DONE），覆盖异常分支处理
+- 实现 YOLOv8 + LiDAR 融合感知管道：置信度过滤 → TF 坐标变换 → 角度匹配 → EMA 滤波，提高室外检测稳定性
+- 提出比例渐变减速算法（v = v_creep + (v_max - v_creep) × (d - d_hold) / (d_stop - d_hold)），实现红灯前平滑刹车替代 move_base 短距规划
+- 引入 10 项抗干扰措施（状态去抖、置信度过滤、距离 EMA 平滑、安全余量等），降低室外误触发率
+- 停车精度 ≤ 1.5m ± 0.2m，通过 Gamma 校正（1.5~2.0）适配室外强光场景

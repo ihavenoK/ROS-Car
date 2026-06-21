@@ -1,0 +1,32 @@
+# Catkin workspace
+build/
+devel/
+install/
+
+# ROS
+*.log
+*.pyc
+__pycache__/
+*.swp
+*.swo
+
+# Model files
+*.pt
+*.pth
+*.weights
+
+# Compressed files
+*.rar
+*.zip
+*.7z
+*.tar.gz
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
