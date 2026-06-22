@@ -1,15 +1,25 @@
 <?xml version="1.0" ?>
 <sdf version="1.7">
   <world name="test_1_world">
-    <!-- 光源 -->
-    <include>
-      <uri>model://sun</uri>
-    </include>
+    <!-- 光源（本地，无需联网） -->
+    <light name="sun" type="directional">
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+    </light>
 
-    <!-- 地面 -->
-    <include>
-      <uri>model://ground_plane</uri>
-    </include>
+    <!-- 地面（本地，无需联网） -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><normal>0 0 1</normal><size>50 50</size></plane></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>50 50</size></plane></geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient></material>
+        </visual>
+      </link>
+    </model>
 
     <!-- 导入 Building Editor 创建的 Test_1 墙壁模型 -->
     <include>
