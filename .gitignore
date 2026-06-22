@@ -19,3 +19,5 @@ install/
 *.swp
 *.swo
 *~
+# 要求
+.txt
