@@ -20,4 +20,4 @@ install/
 *.swo
 *~
 # 要求
-.txt
+*.txt

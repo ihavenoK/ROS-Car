@@ -1,0 +1,367 @@
+<?xml version="1.0" ?>
+<!--
+  Gazebo-compatible URDF for senior_diff (差速) robot.
+  Based on start_roscar/urdf/senior_diff_robot.urdf, extended with:
+  - Inertial properties for physics simulation
+  - Collision geometry for obstacle avoidance
+  - Gazebo plugins: diff drive, camera, LiDAR, IMU
+  - Sensor links: camera_link, laser_link, gyro_link
+-->
+<robot name="wheeltec_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ============================================= -->
+  <!--  Materials                                    -->
+  <!-- ============================================= -->
+  <material name="white"><color rgba="1 1 1 1"/></material>
+  <material name="black"><color rgba="0 0 0 1"/></material>
+  <material name="grey"><color rgba="0.3 0.3 0.3 1"/></material>
+  <material name="blue"><color rgba="0.2 0.4 1 1"/></material>
+  <material name="red"><color rgba="1 0.2 0.2 1"/></material>
+
+  <!-- ============================================= -->
+  <!--  base_footprint (virtual, no mass/inertia)    -->
+  <!--  Coincident with base_link via static TF      -->
+  <!-- ============================================= -->
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child  link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ============================================= -->
+  <!--  base_link (chassis)                          -->
+  <!-- ============================================= -->
+  <link name="base_link">
+    <inertial>
+      <mass value="5.0"/>
+      <inertia ixx="0.036" ixy="0.0" ixz="0.0"
+               iyy="0.062" iyz="0.0"
+               izz="0.091"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0.14 0 0.085" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.375 0.28 0.09"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0.14 0 0.085" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.375 0.28 0.09"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ============================================= -->
+  <!--  Wheels                                       -->
+  <!--  Left / Right = driven wheels (diff drive)     -->
+  <!--  Front = passive caster                       -->
+  <!-- ============================================= -->
+
+  <!-- ---- Left wheel ---- -->
+  <joint name="left_wheel_joint" type="continuous">
+    <origin xyz="0 0.165 0.05" rpy="1.57 0 0"/>
+    <parent link="base_link"/>
+    <child  link="left_wheel_link"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <link name="left_wheel_link">
+    <inertial>
+      <mass value="0.3"/>
+      <inertia ixx="0.00021" ixy="0.0" ixz="0.0"
+               iyy="0.00038" iyz="0.0"
+               izz="0.00021"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.04"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.04"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ---- Right wheel ---- -->
+  <joint name="right_wheel_joint" type="continuous">
+    <origin xyz="0 -0.165 0.05" rpy="1.57 0 0"/>
+    <parent link="base_link"/>
+    <child  link="right_wheel_link"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <link name="right_wheel_link">
+    <inertial>
+      <mass value="0.3"/>
+      <inertia ixx="0.00021" ixy="0.0" ixz="0.0"
+               iyy="0.00038" iyz="0.0"
+               izz="0.00021"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.04"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.04"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ---- Front caster (passive, no drive) ---- -->
+  <joint name="front_wheel_joint" type="continuous">
+    <origin xyz="0.23 0 0.05" rpy="1.57 0 0"/>
+    <parent link="base_link"/>
+    <child  link="front_wheel_link"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <link name="front_wheel_link">
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="0.00014" ixy="0.0" ixz="0.0"
+               iyy="0.00025" iyz="0.0"
+               izz="0.00014"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.04"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.04"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ============================================= -->
+  <!--  Sensor links                                 -->
+  <!--  TF offsets from base_footprint ← start_roscar  -->
+  <!--  launch (senior_diff group)                    -->
+  <!--  camera: x=0.29 z=0.15  laser: x=0.23 z=0.20  -->
+  <!--  laser roll=π (facing backwards)              -->
+  <!-- ============================================= -->
+
+  <!-- ---- Camera ---- -->
+  <joint name="camera_joint" type="fixed">
+    <origin xyz="0.29 0 0.15" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child  link="camera_link"/>
+  </joint>
+
+  <link name="camera_link">
+    <inertial>
+      <mass value="0.05"/>
+      <inertia ixx="1e-6" ixy="0.0" ixz="0.0"
+               iyy="1e-6" iyz="0.0"
+               izz="1e-6"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.03 0.03 0.03"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <!-- ---- 2D LiDAR ---- -->
+  <joint name="laser_joint" type="fixed">
+    <origin xyz="0.23 0 0.20" rpy="3.14 0 0"/>
+    <parent link="base_link"/>
+    <child  link="laser"/>
+  </joint>
+
+  <link name="laser">
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="1e-5" ixy="0.0" ixz="0.0"
+               iyy="1e-5" iyz="0.0"
+               izz="1e-5"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.02"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+  </link>
+
+  <!-- ---- IMU / Gyro ---- -->
+  <joint name="gyro_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child  link="gyro_link"/>
+  </joint>
+
+  <link name="gyro_link">
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="1e-8" ixy="0.0" ixz="0.0"
+               iyy="1e-8" iyz="0.0"
+               izz="1e-8"/>
+    </inertial>
+  </link>
+
+  <!-- ============================================= -->
+  <!--  Gazebo plugins                               -->
+  <!-- ============================================= -->
+
+  <!-- ---- Differential drive ---- -->
+  <gazebo>
+    <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <rosDebugLevel>na</rosDebugLevel>
+
+      <!-- Wheels -->
+      <leftJoint>left_wheel_joint</leftJoint>
+      <rightJoint>right_wheel_joint</rightJoint>
+      <wheelSeparation>0.33</wheelSeparation>
+      <wheelDiameter>0.10</wheelDiameter>
+      <torque>5.0</torque>
+
+      <!-- Velocity commands -->
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+
+      <!-- Update rate -->
+      <updateRate>50.0</updateRate>
+      <publishOdomTF>true</publishOdomTF>
+      <publishWheelTF>false</publishWheelTF>
+      <publishWheelJointState>true</publishWheelJointState>
+    </plugin>
+  </gazebo>
+
+  <!-- ---- Monocular camera ---- -->
+  <gazebo reference="camera_link">
+    <material>Gazebo/Blue</material>
+    <sensor type="camera" name="camera_sensor">
+      <update_rate>30.0</update_rate>
+      <camera name="cam">
+        <horizontal_fov>1.047198</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>30.0</updateRate>
+        <cameraName>usb_cam</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.0</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- ---- 2D LiDAR (RPLidar A3 simulated) ---- -->
+  <gazebo reference="laser">
+    <material>Gazebo/DarkGrey</material>
+    <sensor type="ray" name="laser_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.15</min>
+          <max>12.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
+        <rosDebugLevel>na</rosDebugLevel>
+        <topicName>scan</topicName>
+        <frameName>laser</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- ---- IMU  ---- -->
+  <gazebo reference="gyro_link">
+    <sensor type="imu" name="imu_sensor">
+      <update_rate>100.0</update_rate>
+      <imu>
+        <angular_velocity>
+          <x><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></x>
+          <y><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></y>
+          <z><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></z>
+        </angular_velocity>
+        <linear_acceleration>
+          <x><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></x>
+          <y><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></y>
+          <z><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></z>
+        </linear_acceleration>
+      </imu>
+      <plugin name="imu_controller" filename="libgazebo_ros_imu_sensor.so">
+        <rosDebugLevel>na</rosDebugLevel>
+        <topicName>imu</topicName>
+        <frameName>gyro_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- ---- Gazebo surface friction (prevent sliding) ---- -->
+  <gazebo>
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <maxVel>0.5</maxVel>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+
+</robot>
