@@ -1,0 +1,21 @@
+# VSCode 相关文件
+.vscode/
+
+# 其他常见忽略项
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 编译输出
+build/
+devel/
+install/
+
+# 日志文件
+*.log
+
+# 临时文件
+*.swp
+*.swo
+*~
