@@ -63,7 +63,7 @@
   <!--  Front = passive caster                       -->
   <!-- ============================================= -->
 
-  <!-- ---- Left wheel ---- -->
+  <!-- - - - - Left wheel - - - - -->
   <joint name="left_wheel_joint" type="continuous">
     <origin xyz="0 0.165 0.05" rpy="1.57 0 0"/>
     <parent link="base_link"/>
@@ -95,7 +95,7 @@
     </collision>
   </link>
 
-  <!-- ---- Right wheel ---- -->
+  <!-- - - - - Right wheel - - - - -->
   <joint name="right_wheel_joint" type="continuous">
     <origin xyz="0 -0.165 0.05" rpy="1.57 0 0"/>
     <parent link="base_link"/>
@@ -127,7 +127,7 @@
     </collision>
   </link>
 
-  <!-- ---- Front caster (passive, no drive) ---- -->
+  <!-- - - - - Front caster (passive, no drive) - - - - -->
   <joint name="front_wheel_joint" type="continuous">
     <origin xyz="0.23 0 0.05" rpy="1.57 0 0"/>
     <parent link="base_link"/>
@@ -167,7 +167,7 @@
   <!--  laser roll=π (facing backwards)              -->
   <!-- ============================================= -->
 
-  <!-- ---- Camera ---- -->
+  <!-- - - - - Camera - - - - -->
   <joint name="camera_joint" type="fixed">
     <origin xyz="0.29 0 0.15" rpy="0 0 0"/>
     <parent link="base_link"/>
@@ -191,7 +191,7 @@
     </visual>
   </link>
 
-  <!-- ---- 2D LiDAR ---- -->
+  <!-- - - - - 2D LiDAR - - - - -->
   <joint name="laser_joint" type="fixed">
     <origin xyz="0.23 0 0.20" rpy="3.14 0 0"/>
     <parent link="base_link"/>
@@ -215,7 +215,7 @@
     </visual>
   </link>
 
-  <!-- ---- IMU / Gyro ---- -->
+  <!-- - - - - IMU / Gyro - - - - -->
   <joint name="gyro_joint" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <parent link="base_link"/>
@@ -235,7 +235,7 @@
   <!--  Gazebo plugins                               -->
   <!-- ============================================= -->
 
-  <!-- ---- Differential drive ---- -->
+  <!-- - - - - Differential drive - - - - -->
   <gazebo>
     <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
       <rosDebugLevel>na</rosDebugLevel>
@@ -261,7 +261,7 @@
     </plugin>
   </gazebo>
 
-  <!-- ---- Monocular camera ---- -->
+  <!-- - - - - Monocular camera - - - - -->
   <gazebo reference="camera_link">
     <material>Gazebo/Blue</material>
     <sensor type="camera" name="camera_sensor">
@@ -295,7 +295,7 @@
     </sensor>
   </gazebo>
 
-  <!-- ---- 2D LiDAR (RPLidar A3 simulated) ---- -->
+  <!-- - - - - 2D LiDAR (RPLidar A3 simulated) - - - - -->
   <gazebo reference="laser">
     <material>Gazebo/DarkGrey</material>
     <sensor type="ray" name="laser_sensor">
@@ -330,7 +330,7 @@
     </sensor>
   </gazebo>
 
-  <!-- ---- IMU  ---- -->
+  <!-- - - - - IMU  - - - - -->
   <gazebo reference="gyro_link">
     <sensor type="imu" name="imu_sensor">
       <update_rate>100.0</update_rate>
@@ -354,7 +354,7 @@
     </sensor>
   </gazebo>
 
-  <!-- ---- Gazebo surface friction (prevent sliding) ---- -->
+  <!-- - - - - Gazebo surface friction (prevent sliding) - - - - -->
   <gazebo>
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
