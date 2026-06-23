@@ -1,0 +1,29 @@
+<launch>
+  <!-- ========================================================== -->
+  <!--  roscar_gazebo 仿真启动 —— 最简版                          -->
+  <!--  先跑通：小车能在 Gazebo 里 spawn 并受键盘控制             -->
+  <!--  后续再加入 world 建筑 / 红绿灯 / multi_nav                 -->
+  <!-- ========================================================== -->
+
+  <!-- 1. 加载 URDF 模型到参数服务器 -->
+  <param name="robot_description"
+         textfile="$(find roscar_gazebo)/urdf/senior_diff_gazebo.urdf"/>
+
+  <!-- 2. 发布 joint states + TF -->
+  <node name="joint_state_publisher"  pkg="joint_state_publisher"  type="joint_state_publisher"/>
+  <node name="robot_state_publisher"  pkg="robot_state_publisher"  type="robot_state_publisher"/>
+
+  <!-- 3. 启动 Gazebo 空世界 -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name"   value="$(find roscar_gazebo)/worlds/roscar_empty.world"/>
+    <arg name="paused"       value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui"          value="true"/>
+  </include>
+
+  <!-- 4. 在地面 spawn 小车 -->
+  <node name="spawn_roscar" pkg="gazebo_ros" type="spawn_model"
+        args="-param robot_description -urdf -model roscar
+              -x 0 -y 0 -z 0.1"/>
+
+</launch>
