@@ -1,4 +1,4 @@
-prefix=/home/gdut/catkin_roscar/install
+prefix=/home/cbh/ROS-Car/install
 
 Name: driver
 Description: Description of driver

@@ -1,8 +1,8 @@
-# Install script for directory: /home/gdut/catkin_roscar/src/driver
+# Install script for directory: /home/cbh/ROS-Car/src/driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/gdut/catkin_roscar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/cbh/ROS-Car/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gdut/catkin_roscar/build/driver/catkin_generated/installspace/driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/cbh/ROS-Car/build/driver/catkin_generated/installspace/driver.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/driver/cmake" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/build/driver/catkin_generated/installspace/driverConfig.cmake"
-    "/home/gdut/catkin_roscar/build/driver/catkin_generated/installspace/driverConfig-version.cmake"
+    "/home/cbh/ROS-Car/build/driver/catkin_generated/installspace/driverConfig.cmake"
+    "/home/cbh/ROS-Car/build/driver/catkin_generated/installspace/driverConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/driver" TYPE FILE FILES "/home/gdut/catkin_roscar/src/driver/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/driver" TYPE FILE FILES "/home/cbh/ROS-Car/src/driver/package.xml")
 endif()
 

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "roscpp;rospy;std_msgs;geometry_msgs;nav_msgs;tf;serial".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "driver"
-PROJECT_SPACE_DIR = "/home/gdut/catkin_roscar/install"
+PROJECT_SPACE_DIR = "/home/cbh/ROS-Car/install"
 PROJECT_VERSION = "0.0.0"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/set_device_ip"
-  "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/set_device_ip.pdb"
+  "/home/cbh/ROS-Car/devel/lib/orbbec_camera/set_device_ip"
+  "/home/cbh/ROS-Car/devel/lib/orbbec_camera/set_device_ip.pdb"
   "CMakeFiles/set_device_ip.dir/src/set_device_ip.cpp.o"
 )
 

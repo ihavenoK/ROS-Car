@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/image_sync_example_node"
-  "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/image_sync_example_node.pdb"
+  "/home/cbh/ROS-Car/devel/lib/orbbec_camera/image_sync_example_node"
+  "/home/cbh/ROS-Car/devel/lib/orbbec_camera/image_sync_example_node.pdb"
   "CMakeFiles/image_sync_example_node.dir/examples/multi_camera_time_sync/image_sync_example_node.cpp.o"
 )
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gdut/catkin_roscar/src
+CMAKE_SOURCE_DIR = /home/cbh/ROS-Car/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gdut/catkin_roscar/build
+CMAKE_BINARY_DIR = /home/cbh/ROS-Car/build
 
 # Utility rule file for copy_orbbec_files.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/gdut/catkin_roscar/build
 include orbbec_camera/CMakeFiles/copy_orbbec_files.dir/progress.make
 
 orbbec_camera/CMakeFiles/copy_orbbec_files:
-	cd /home/gdut/catkin_roscar/build/orbbec_camera && /usr/bin/cmake -E copy_directory /home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64/extensions/ /home/gdut/catkin_roscar/devel/lib/extensions/
+	cd /home/cbh/ROS-Car/build/orbbec_camera && /usr/bin/cmake -E copy_directory /home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64/extensions/ /home/cbh/ROS-Car/devel/lib/extensions/
 
 copy_orbbec_files: orbbec_camera/CMakeFiles/copy_orbbec_files
 copy_orbbec_files: orbbec_camera/CMakeFiles/copy_orbbec_files.dir/build.make
@@ -67,10 +67,10 @@ orbbec_camera/CMakeFiles/copy_orbbec_files.dir/build: copy_orbbec_files
 .PHONY : orbbec_camera/CMakeFiles/copy_orbbec_files.dir/build
 
 orbbec_camera/CMakeFiles/copy_orbbec_files.dir/clean:
-	cd /home/gdut/catkin_roscar/build/orbbec_camera && $(CMAKE_COMMAND) -P CMakeFiles/copy_orbbec_files.dir/cmake_clean.cmake
+	cd /home/cbh/ROS-Car/build/orbbec_camera && $(CMAKE_COMMAND) -P CMakeFiles/copy_orbbec_files.dir/cmake_clean.cmake
 .PHONY : orbbec_camera/CMakeFiles/copy_orbbec_files.dir/clean
 
 orbbec_camera/CMakeFiles/copy_orbbec_files.dir/depend:
-	cd /home/gdut/catkin_roscar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gdut/catkin_roscar/src /home/gdut/catkin_roscar/src/orbbec_camera /home/gdut/catkin_roscar/build /home/gdut/catkin_roscar/build/orbbec_camera /home/gdut/catkin_roscar/build/orbbec_camera/CMakeFiles/copy_orbbec_files.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cbh/ROS-Car/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cbh/ROS-Car/src /home/cbh/ROS-Car/src/orbbec_camera /home/cbh/ROS-Car/build /home/cbh/ROS-Car/build/orbbec_camera /home/cbh/ROS-Car/build/orbbec_camera/CMakeFiles/copy_orbbec_files.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : orbbec_camera/CMakeFiles/copy_orbbec_files.dir/depend
 

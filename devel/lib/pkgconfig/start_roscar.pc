@@ -1,4 +1,4 @@
-prefix=/home/gdut/catkin_roscar/devel
+prefix=/home/cbh/ROS-Car/devel
 
 Name: start_roscar
 Description: Description of start_roscar

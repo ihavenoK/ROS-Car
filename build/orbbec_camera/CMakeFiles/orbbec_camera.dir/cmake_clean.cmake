@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/gdut/catkin_roscar/devel/lib/liborbbec_camera.pdb"
-  "/home/gdut/catkin_roscar/devel/lib/liborbbec_camera.so"
+  "/home/cbh/ROS-Car/devel/lib/liborbbec_camera.pdb"
+  "/home/cbh/ROS-Car/devel/lib/liborbbec_camera.so"
   "CMakeFiles/orbbec_camera.dir/src/d2c_viewer.cpp.o"
   "CMakeFiles/orbbec_camera.dir/src/jpeg_decoder.cpp.o"
   "CMakeFiles/orbbec_camera.dir/src/ob_camera_node.cpp.o"

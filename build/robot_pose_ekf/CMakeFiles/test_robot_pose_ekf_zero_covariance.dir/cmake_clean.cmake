@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/gdut/catkin_roscar/devel/lib/robot_pose_ekf/test_robot_pose_ekf_zero_covariance"
-  "/home/gdut/catkin_roscar/devel/lib/robot_pose_ekf/test_robot_pose_ekf_zero_covariance.pdb"
+  "/home/cbh/ROS-Car/devel/lib/robot_pose_ekf/test_robot_pose_ekf_zero_covariance"
+  "/home/cbh/ROS-Car/devel/lib/robot_pose_ekf/test_robot_pose_ekf_zero_covariance.pdb"
   "CMakeFiles/test_robot_pose_ekf_zero_covariance.dir/test/test_robot_pose_ekf_zero_covariance.cpp.o"
 )
 

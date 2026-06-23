@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/gdut/catkin_roscar/devel/lib/driver/driver_node"
-  "/home/gdut/catkin_roscar/devel/lib/driver/driver_node.pdb"
+  "/home/cbh/ROS-Car/devel/lib/driver/driver_node"
+  "/home/cbh/ROS-Car/devel/lib/driver/driver_node.pdb"
   "CMakeFiles/driver_node.dir/src/Quaternion_Solution.cpp.o"
   "CMakeFiles/driver_node.dir/src/ros_car_driver.cpp.o"
 )

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gdut/catkin_roscar/src/orbbec_camera/src/list_depth_work_mode.cpp" "/home/gdut/catkin_roscar/build/orbbec_camera/CMakeFiles/list_depth_work_mode_node.dir/src/list_depth_work_mode.cpp.o"
+  "/home/cbh/ROS-Car/src/orbbec_camera/src/list_depth_work_mode.cpp" "/home/cbh/ROS-Car/build/orbbec_camera/CMakeFiles/list_depth_work_mode_node.dir/src/list_depth_work_mode.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -20,18 +20,18 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/gdut/catkin_roscar/devel/include"
+  "/home/cbh/ROS-Car/devel/include"
   "orbbec_camera/include"
-  "/home/gdut/catkin_roscar/src/orbbec_camera/include"
+  "/home/cbh/ROS-Car/src/orbbec_camera/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/home/gdut/catkin_roscar/src/orbbec_camera/SDK/include"
+  "/home/cbh/ROS-Car/src/orbbec_camera/SDK/include"
   "/usr/include/opencv4"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/gdut/catkin_roscar/build/orbbec_camera/CMakeFiles/orbbec_camera.dir/DependInfo.cmake"
+  "/home/cbh/ROS-Car/build/orbbec_camera/CMakeFiles/orbbec_camera.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

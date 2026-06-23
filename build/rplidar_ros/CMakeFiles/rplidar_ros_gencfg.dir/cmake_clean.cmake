@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/gdut/catkin_roscar/devel/include/rplidar_ros/paramsConfig.h"
-  "/home/gdut/catkin_roscar/devel/lib/python3/dist-packages/rplidar_ros/cfg/paramsConfig.py"
-  "/home/gdut/catkin_roscar/devel/share/rplidar_ros/docs/paramsConfig-usage.dox"
-  "/home/gdut/catkin_roscar/devel/share/rplidar_ros/docs/paramsConfig.dox"
-  "/home/gdut/catkin_roscar/devel/share/rplidar_ros/docs/paramsConfig.wikidoc"
+  "/home/cbh/ROS-Car/devel/include/rplidar_ros/paramsConfig.h"
+  "/home/cbh/ROS-Car/devel/lib/python3/dist-packages/rplidar_ros/cfg/paramsConfig.py"
+  "/home/cbh/ROS-Car/devel/share/rplidar_ros/docs/paramsConfig-usage.dox"
+  "/home/cbh/ROS-Car/devel/share/rplidar_ros/docs/paramsConfig.dox"
+  "/home/cbh/ROS-Car/devel/share/rplidar_ros/docs/paramsConfig.wikidoc"
   "CMakeFiles/rplidar_ros_gencfg"
 )
 

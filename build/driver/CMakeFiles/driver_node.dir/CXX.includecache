@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/gdut/catkin_roscar/src/driver/include/Quaternion_Solution.h
+/home/cbh/ROS-Car/src/driver/include/Quaternion_Solution.h
 ros_car_driver.h
-/home/gdut/catkin_roscar/src/driver/include/ros_car_driver.h
+/home/cbh/ROS-Car/src/driver/include/ros_car_driver.h
 
-/home/gdut/catkin_roscar/src/driver/include/ros_car_driver.h
+/home/cbh/ROS-Car/src/driver/include/ros_car_driver.h
 vector
 -
 cstdint
@@ -26,7 +26,7 @@ termios.h
 errno.h
 -
 ros/ros.h
-/home/gdut/catkin_roscar/src/driver/include/ros/ros.h
+/home/cbh/ROS-Car/src/driver/include/ros/ros.h
 iostream
 -
 string.h
@@ -70,11 +70,15 @@ sensor_msgs/Imu.h
 std_msgs/Int16MultiArray.h
 -
 
-/home/gdut/catkin_roscar/src/driver/src/ros_car_driver.cpp
-ros_car_driver.h
-/home/gdut/catkin_roscar/src/driver/src/ros_car_driver.h
+/home/cbh/ROS-Car/src/driver/src/Quaternion_Solution.cpp
 Quaternion_Solution.h
-/home/gdut/catkin_roscar/src/driver/src/Quaternion_Solution.h
+/home/cbh/ROS-Car/src/driver/src/Quaternion_Solution.h
+
+/home/cbh/ROS-Car/src/driver/src/ros_car_driver.cpp
+ros_car_driver.h
+/home/cbh/ROS-Car/src/driver/src/ros_car_driver.h
+Quaternion_Solution.h
+/home/cbh/ROS-Car/src/driver/src/Quaternion_Solution.h
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

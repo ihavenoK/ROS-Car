@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/gdut/catkin_roscar/devel/lib/python3/dist-packages/robot_pose_ekf/srv/_GetStatus.py"
-  "/home/gdut/catkin_roscar/devel/lib/python3/dist-packages/robot_pose_ekf/srv/__init__.py"
+  "/home/cbh/ROS-Car/devel/lib/python3/dist-packages/robot_pose_ekf/srv/_GetStatus.py"
+  "/home/cbh/ROS-Car/devel/lib/python3/dist-packages/robot_pose_ekf/srv/__init__.py"
   "CMakeFiles/robot_pose_ekf_generate_messages_py"
 )
 

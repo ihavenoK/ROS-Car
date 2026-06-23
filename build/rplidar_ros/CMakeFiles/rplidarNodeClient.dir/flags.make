@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11  -O3 -DNDEBUG
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"rplidar_ros\"
 
-CXX_INCLUDES = -I/home/gdut/catkin_roscar/devel/include -I/home/gdut/catkin_roscar/src/rplidar_ros/./sdk/include -I/home/gdut/catkin_roscar/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/cbh/ROS-Car/devel/include -I/home/cbh/ROS-Car/src/rplidar_ros/./sdk/include -I/home/cbh/ROS-Car/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/gdut/catkin_roscar/src
+# Install script for directory: /home/cbh/ROS-Car/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/gdut/catkin_roscar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/cbh/ROS-Car/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,112 +49,104 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/gdut/catkin_roscar/install/_setup_util.py")
+   "/home/cbh/ROS-Car/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/gdut/catkin_roscar/install" TYPE PROGRAM FILES "/home/gdut/catkin_roscar/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/cbh/ROS-Car/install" TYPE PROGRAM FILES "/home/cbh/ROS-Car/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/gdut/catkin_roscar/install/env.sh")
+   "/home/cbh/ROS-Car/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/gdut/catkin_roscar/install" TYPE PROGRAM FILES "/home/gdut/catkin_roscar/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/cbh/ROS-Car/install" TYPE PROGRAM FILES "/home/cbh/ROS-Car/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/gdut/catkin_roscar/install/setup.bash;/home/gdut/catkin_roscar/install/local_setup.bash")
+   "/home/cbh/ROS-Car/install/setup.bash;/home/cbh/ROS-Car/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/gdut/catkin_roscar/install" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/build/catkin_generated/installspace/setup.bash"
-    "/home/gdut/catkin_roscar/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/cbh/ROS-Car/install" TYPE FILE FILES
+    "/home/cbh/ROS-Car/build/catkin_generated/installspace/setup.bash"
+    "/home/cbh/ROS-Car/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/gdut/catkin_roscar/install/setup.sh;/home/gdut/catkin_roscar/install/local_setup.sh")
+   "/home/cbh/ROS-Car/install/setup.sh;/home/cbh/ROS-Car/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/gdut/catkin_roscar/install" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/build/catkin_generated/installspace/setup.sh"
-    "/home/gdut/catkin_roscar/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/cbh/ROS-Car/install" TYPE FILE FILES
+    "/home/cbh/ROS-Car/build/catkin_generated/installspace/setup.sh"
+    "/home/cbh/ROS-Car/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/gdut/catkin_roscar/install/setup.zsh;/home/gdut/catkin_roscar/install/local_setup.zsh")
+   "/home/cbh/ROS-Car/install/setup.zsh;/home/cbh/ROS-Car/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/gdut/catkin_roscar/install" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/build/catkin_generated/installspace/setup.zsh"
-    "/home/gdut/catkin_roscar/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/cbh/ROS-Car/install" TYPE FILE FILES
+    "/home/cbh/ROS-Car/build/catkin_generated/installspace/setup.zsh"
+    "/home/cbh/ROS-Car/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/gdut/catkin_roscar/install/setup.fish;/home/gdut/catkin_roscar/install/local_setup.fish")
+   "/home/cbh/ROS-Car/install/setup.fish;/home/cbh/ROS-Car/install/local_setup.fish")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/gdut/catkin_roscar/install" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/build/catkin_generated/installspace/setup.fish"
-    "/home/gdut/catkin_roscar/build/catkin_generated/installspace/local_setup.fish"
+file(INSTALL DESTINATION "/home/cbh/ROS-Car/install" TYPE FILE FILES
+    "/home/cbh/ROS-Car/build/catkin_generated/installspace/setup.fish"
+    "/home/cbh/ROS-Car/build/catkin_generated/installspace/local_setup.fish"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/gdut/catkin_roscar/install/.rosinstall")
+   "/home/cbh/ROS-Car/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/gdut/catkin_roscar/install" TYPE FILE FILES "/home/gdut/catkin_roscar/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/cbh/ROS-Car/install" TYPE FILE FILES "/home/cbh/ROS-Car/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gdut/catkin_roscar/build/gtest/cmake_install.cmake")
-  include("/home/gdut/catkin_roscar/build/start_roscar/cmake_install.cmake")
-  include("/home/gdut/catkin_roscar/build/ele_line_follower/cmake_install.cmake")
-  include("/home/gdut/catkin_roscar/build/rplidar_ros/cmake_install.cmake")
-  include("/home/gdut/catkin_roscar/build/orbbec_camera/cmake_install.cmake")
-  include("/home/gdut/catkin_roscar/build/driver/cmake_install.cmake")
-  include("/home/gdut/catkin_roscar/build/robot_pose_ekf/cmake_install.cmake")
-  include("/home/gdut/catkin_roscar/build/roscar_slam/cmake_install.cmake")
-  include("/home/gdut/catkin_roscar/build/traffic_light_yolo/cmake_install.cmake")
-  include("/home/gdut/catkin_roscar/build/usb_cam/cmake_install.cmake")
+  include("/home/cbh/ROS-Car/build/gtest/cmake_install.cmake")
+  include("/home/cbh/ROS-Car/build/roscar_gazebo/cmake_install.cmake")
 
 endif()
 
@@ -166,5 +158,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gdut/catkin_roscar/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/cbh/ROS-Car/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

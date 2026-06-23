@@ -1,4 +1,4 @@
-prefix=/home/gdut/catkin_roscar/devel
+prefix=/home/cbh/ROS-Car/devel
 
 Name: ele_line_follower
 Description: Description of ele_line_follower

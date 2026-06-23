@@ -1,2 +1,2 @@
-driver:ele_line_follower:multi_nav_traffic:orbbec_camera:robot_pose_ekf:roscar_gazebo:roscar_slam:rplidar_ros:start_roscar:traffic_light_yolo:usb_cam
--DCATKIN_DEVEL_PREFIX=/home/cbh/ROS-Car/devel -DCMAKE_INSTALL_PREFIX=/home/cbh/ROS-Car/install -G Unix Makefiles
+roscar_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/cbh/ROS-Car/devel -DCMAKE_INSTALL_PREFIX=/home/cbh/ROS-Car/install -DCATKIN_WHITELIST_PACKAGES=roscar_gazebo -G Unix Makefiles

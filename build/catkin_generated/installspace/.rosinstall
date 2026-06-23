@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/gdut/catkin_roscar/install/setup.sh
+    local-name: /home/cbh/ROS-Car/install/setup.sh

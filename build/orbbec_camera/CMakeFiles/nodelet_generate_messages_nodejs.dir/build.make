@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gdut/catkin_roscar/src
+CMAKE_SOURCE_DIR = /home/cbh/ROS-Car/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gdut/catkin_roscar/build
+CMAKE_BINARY_DIR = /home/cbh/ROS-Car/build
 
 # Utility rule file for nodelet_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ orbbec_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/build: nodelet_gen
 .PHONY : orbbec_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
 
 orbbec_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean:
-	cd /home/gdut/catkin_roscar/build/orbbec_camera && $(CMAKE_COMMAND) -P CMakeFiles/nodelet_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/cbh/ROS-Car/build/orbbec_camera && $(CMAKE_COMMAND) -P CMakeFiles/nodelet_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : orbbec_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
 
 orbbec_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/depend:
-	cd /home/gdut/catkin_roscar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gdut/catkin_roscar/src /home/gdut/catkin_roscar/src/orbbec_camera /home/gdut/catkin_roscar/build /home/gdut/catkin_roscar/build/orbbec_camera /home/gdut/catkin_roscar/build/orbbec_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cbh/ROS-Car/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cbh/ROS-Car/src /home/cbh/ROS-Car/src/orbbec_camera /home/cbh/ROS-Car/build /home/cbh/ROS-Car/build/orbbec_camera /home/cbh/ROS-Car/build/orbbec_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : orbbec_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/depend
 

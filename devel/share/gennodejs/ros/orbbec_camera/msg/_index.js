@@ -1,16 +1,16 @@
 
 "use strict";
 
-let Extrinsics = require('./Extrinsics.js');
-let DeviceInfo = require('./DeviceInfo.js');
-let IMUInfo = require('./IMUInfo.js');
 let Metadata = require('./Metadata.js');
+let DeviceInfo = require('./DeviceInfo.js');
+let Extrinsics = require('./Extrinsics.js');
+let IMUInfo = require('./IMUInfo.js');
 let DeviceStatus = require('./DeviceStatus.js');
 
 module.exports = {
-  Extrinsics: Extrinsics,
-  DeviceInfo: DeviceInfo,
-  IMUInfo: IMUInfo,
   Metadata: Metadata,
+  DeviceInfo: DeviceInfo,
+  Extrinsics: Extrinsics,
+  IMUInfo: IMUInfo,
   DeviceStatus: DeviceStatus,
 };

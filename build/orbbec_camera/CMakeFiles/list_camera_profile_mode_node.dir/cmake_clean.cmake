@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/list_camera_profile_mode_node"
-  "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/list_camera_profile_mode_node.pdb"
+  "/home/cbh/ROS-Car/devel/lib/orbbec_camera/list_camera_profile_mode_node"
+  "/home/cbh/ROS-Car/devel/lib/orbbec_camera/list_camera_profile_mode_node.pdb"
   "CMakeFiles/list_camera_profile_mode_node.dir/src/list_camera_profile_mode.cpp.o"
 )
 

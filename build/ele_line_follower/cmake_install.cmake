@@ -1,8 +1,8 @@
-# Install script for directory: /home/gdut/catkin_roscar/src/ele_line_follower
+# Install script for directory: /home/cbh/ROS-Car/src/ele_line_follower
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/gdut/catkin_roscar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/cbh/ROS-Car/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gdut/catkin_roscar/build/ele_line_follower/catkin_generated/installspace/ele_line_follower.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/cbh/ROS-Car/build/ele_line_follower/catkin_generated/installspace/ele_line_follower.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ele_line_follower/cmake" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/build/ele_line_follower/catkin_generated/installspace/ele_line_followerConfig.cmake"
-    "/home/gdut/catkin_roscar/build/ele_line_follower/catkin_generated/installspace/ele_line_followerConfig-version.cmake"
+    "/home/cbh/ROS-Car/build/ele_line_follower/catkin_generated/installspace/ele_line_followerConfig.cmake"
+    "/home/cbh/ROS-Car/build/ele_line_follower/catkin_generated/installspace/ele_line_followerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ele_line_follower" TYPE FILE FILES "/home/gdut/catkin_roscar/src/ele_line_follower/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ele_line_follower" TYPE FILE FILES "/home/cbh/ROS-Car/src/ele_line_follower/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ele_line_follower" TYPE PROGRAM FILES "/home/gdut/catkin_roscar/build/ele_line_follower/catkin_generated/installspace/ele_line_follower.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ele_line_follower" TYPE PROGRAM FILES "/home/cbh/ROS-Car/build/ele_line_follower/catkin_generated/installspace/ele_line_follower.py")
 endif()
 

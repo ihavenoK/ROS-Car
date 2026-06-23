@@ -1,8 +1,8 @@
-# Install script for directory: /home/gdut/catkin_roscar/src/start_roscar
+# Install script for directory: /home/cbh/ROS-Car/src/start_roscar
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/gdut/catkin_roscar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/cbh/ROS-Car/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gdut/catkin_roscar/build/start_roscar/catkin_generated/installspace/start_roscar.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/cbh/ROS-Car/build/start_roscar/catkin_generated/installspace/start_roscar.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/start_roscar/cmake" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/build/start_roscar/catkin_generated/installspace/start_roscarConfig.cmake"
-    "/home/gdut/catkin_roscar/build/start_roscar/catkin_generated/installspace/start_roscarConfig-version.cmake"
+    "/home/cbh/ROS-Car/build/start_roscar/catkin_generated/installspace/start_roscarConfig.cmake"
+    "/home/cbh/ROS-Car/build/start_roscar/catkin_generated/installspace/start_roscarConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/start_roscar" TYPE FILE FILES "/home/gdut/catkin_roscar/src/start_roscar/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/start_roscar" TYPE FILE FILES "/home/cbh/ROS-Car/src/start_roscar/package.xml")
 endif()
 

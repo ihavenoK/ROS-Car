@@ -1,8 +1,8 @@
-# Install script for directory: /home/gdut/catkin_roscar/src/orbbec_camera
+# Install script for directory: /home/cbh/ROS-Car/src/orbbec_camera
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/gdut/catkin_roscar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/cbh/ROS-Car/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,83 +39,83 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera/msg" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/src/orbbec_camera/msg/DeviceInfo.msg"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/msg/Extrinsics.msg"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/msg/Metadata.msg"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/msg/IMUInfo.msg"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/msg/DeviceStatus.msg"
+    "/home/cbh/ROS-Car/src/orbbec_camera/msg/DeviceInfo.msg"
+    "/home/cbh/ROS-Car/src/orbbec_camera/msg/Extrinsics.msg"
+    "/home/cbh/ROS-Car/src/orbbec_camera/msg/Metadata.msg"
+    "/home/cbh/ROS-Car/src/orbbec_camera/msg/IMUInfo.msg"
+    "/home/cbh/ROS-Car/src/orbbec_camera/msg/DeviceStatus.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera/srv" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/GetBool.srv"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/SetBool.srv"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/GetCameraInfo.srv"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/GetCameraParams.srv"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/GetDeviceInfo.srv"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/GetInt32.srv"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/SetFilter.srv"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/GetString.srv"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/SetInt32.srv"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/SetString.srv"
-    "/home/gdut/catkin_roscar/src/orbbec_camera/srv/SetArrays.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/GetBool.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/SetBool.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/GetCameraInfo.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/GetCameraParams.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/GetDeviceInfo.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/GetInt32.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/SetFilter.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/GetString.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/SetInt32.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/SetString.srv"
+    "/home/cbh/ROS-Car/src/orbbec_camera/srv/SetArrays.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera/cmake" TYPE FILE FILES "/home/gdut/catkin_roscar/build/orbbec_camera/catkin_generated/installspace/orbbec_camera-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera/cmake" TYPE FILE FILES "/home/cbh/ROS-Car/build/orbbec_camera/catkin_generated/installspace/orbbec_camera-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/devel/include/orbbec_camera")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/devel/include/orbbec_camera")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/devel/share/roseus/ros/orbbec_camera")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/devel/share/roseus/ros/orbbec_camera")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/devel/share/common-lisp/ros/orbbec_camera")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/devel/share/common-lisp/ros/orbbec_camera")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/devel/share/gennodejs/ros/orbbec_camera")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/devel/share/gennodejs/ros/orbbec_camera")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/gdut/catkin_roscar/devel/lib/python3/dist-packages/orbbec_camera")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/cbh/ROS-Car/devel/lib/python3/dist-packages/orbbec_camera")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/devel/lib/python3/dist-packages/orbbec_camera")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/devel/lib/python3/dist-packages/orbbec_camera")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gdut/catkin_roscar/build/orbbec_camera/catkin_generated/installspace/orbbec_camera.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/cbh/ROS-Car/build/orbbec_camera/catkin_generated/installspace/orbbec_camera.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera/cmake" TYPE FILE FILES "/home/gdut/catkin_roscar/build/orbbec_camera/catkin_generated/installspace/orbbec_camera-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera/cmake" TYPE FILE FILES "/home/cbh/ROS-Car/build/orbbec_camera/catkin_generated/installspace/orbbec_camera-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera/cmake" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/build/orbbec_camera/catkin_generated/installspace/orbbec_cameraConfig.cmake"
-    "/home/gdut/catkin_roscar/build/orbbec_camera/catkin_generated/installspace/orbbec_cameraConfig-version.cmake"
+    "/home/cbh/ROS-Car/build/orbbec_camera/catkin_generated/installspace/orbbec_cameraConfig.cmake"
+    "/home/cbh/ROS-Car/build/orbbec_camera/catkin_generated/installspace/orbbec_cameraConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera" TYPE FILE FILES "/home/gdut/catkin_roscar/src/orbbec_camera/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera" TYPE FILE FILES "/home/cbh/ROS-Car/src/orbbec_camera/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE PROGRAM FILES "/home/gdut/catkin_roscar/build/orbbec_camera/catkin_generated/installspace/common_benchmark_node.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE PROGRAM FILES "/home/cbh/ROS-Car/build/orbbec_camera/catkin_generated/installspace/common_benchmark_node.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE PROGRAM FILES "/home/gdut/catkin_roscar/build/orbbec_camera/catkin_generated/installspace/service_benchmark_node.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE PROGRAM FILES "/home/cbh/ROS-Car/build/orbbec_camera/catkin_generated/installspace/service_benchmark_node.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -123,15 +123,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera.so"
-         RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gdut/catkin_roscar/devel/lib/liborbbec_camera.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/cbh/ROS-Car/devel/lib/liborbbec_camera.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera.so"
-         OLD_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64:/opt/ros/noetic/lib:"
-         NEW_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         OLD_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64:/opt/ros/noetic/lib:"
+         NEW_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera.so")
     endif()
@@ -146,15 +146,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera_nodelet.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera_nodelet.so"
-         RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/gdut/catkin_roscar/devel/lib/liborbbec_camera_nodelet.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/cbh/ROS-Car/devel/lib/liborbbec_camera_nodelet.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera_nodelet.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera_nodelet.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera_nodelet.so"
-         OLD_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64:/opt/ros/noetic/lib:"
-         NEW_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         OLD_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64:/opt/ros/noetic/lib:"
+         NEW_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liborbbec_camera_nodelet.so")
     endif()
@@ -169,15 +169,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/orbbec_camera_node")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/orbbec_camera_node"
-         RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE EXECUTABLE FILES "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/orbbec_camera_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE EXECUTABLE FILES "/home/cbh/ROS-Car/devel/lib/orbbec_camera/orbbec_camera_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/orbbec_camera_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/orbbec_camera_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/orbbec_camera_node"
-         OLD_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64:/opt/ros/noetic/lib:/home/gdut/catkin_roscar/devel/lib:"
-         NEW_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         OLD_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64:/opt/ros/noetic/lib:/home/cbh/ROS-Car/devel/lib:"
+         NEW_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/orbbec_camera_node")
     endif()
@@ -189,15 +189,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_devices_node")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_devices_node"
-         RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE EXECUTABLE FILES "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/list_devices_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE EXECUTABLE FILES "/home/cbh/ROS-Car/devel/lib/orbbec_camera/list_devices_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_devices_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_devices_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_devices_node"
-         OLD_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64:/opt/ros/noetic/lib:/home/gdut/catkin_roscar/devel/lib:"
-         NEW_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         OLD_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64:/opt/ros/noetic/lib:/home/cbh/ROS-Car/devel/lib:"
+         NEW_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_devices_node")
     endif()
@@ -209,15 +209,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_depth_work_mode_node")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_depth_work_mode_node"
-         RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE EXECUTABLE FILES "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/list_depth_work_mode_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE EXECUTABLE FILES "/home/cbh/ROS-Car/devel/lib/orbbec_camera/list_depth_work_mode_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_depth_work_mode_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_depth_work_mode_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_depth_work_mode_node"
-         OLD_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64:/opt/ros/noetic/lib:/home/gdut/catkin_roscar/devel/lib:"
-         NEW_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         OLD_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64:/opt/ros/noetic/lib:/home/cbh/ROS-Car/devel/lib:"
+         NEW_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_depth_work_mode_node")
     endif()
@@ -229,15 +229,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_camera_profile_mode_node")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_camera_profile_mode_node"
-         RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE EXECUTABLE FILES "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/list_camera_profile_mode_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera" TYPE EXECUTABLE FILES "/home/cbh/ROS-Car/devel/lib/orbbec_camera/list_camera_profile_mode_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_camera_profile_mode_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_camera_profile_mode_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_camera_profile_mode_node"
-         OLD_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64:/opt/ros/noetic/lib:/home/gdut/catkin_roscar/devel/lib:"
-         NEW_RPATH ":/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64")
+         OLD_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64:/opt/ros/noetic/lib:/home/cbh/ROS-Car/devel/lib:"
+         NEW_RPATH ":/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orbbec_camera/list_camera_profile_mode_node")
     endif()
@@ -245,34 +245,34 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera/SDK/lib" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera/SDK/lib" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/orbbec_camera/" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/src/orbbec_camera/include")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/orbbec_camera/" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/src/orbbec_camera/include")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/orbbec_camera/" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/src/orbbec_camera/SDK/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/orbbec_camera/" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/src/orbbec_camera/SDK/include/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/src/orbbec_camera/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/src/orbbec_camera/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/src/orbbec_camera/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/src/orbbec_camera/config")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera" TYPE FILE FILES "/home/gdut/catkin_roscar/src/orbbec_camera/nodelet_plugins.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera" TYPE FILE FILES "/home/cbh/ROS-Car/src/orbbec_camera/nodelet_plugins.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera" TYPE FILE FILES "/home/gdut/catkin_roscar/src/orbbec_camera/LICENSE")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/orbbec_camera" TYPE FILE FILES "/home/cbh/ROS-Car/src/orbbec_camera/LICENSE")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/src/orbbec_camera/SDK/lib/arm64/" FILES_MATCHING REGEX "/[^/]*\\.so$" REGEX "/[^/]*\\.so\\.[^/]*$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/src/orbbec_camera/SDK/lib/x64/" FILES_MATCHING REGEX "/[^/]*\\.so$" REGEX "/[^/]*\\.so\\.[^/]*$")
 endif()
 

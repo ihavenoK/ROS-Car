@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/service_benchmark_node"
-  "/home/gdut/catkin_roscar/devel/lib/orbbec_camera/service_benchmark_node.pdb"
+  "/home/cbh/ROS-Car/devel/lib/orbbec_camera/service_benchmark_node"
+  "/home/cbh/ROS-Car/devel/lib/orbbec_camera/service_benchmark_node.pdb"
   "CMakeFiles/service_benchmark_node.dir/scripts/service_benchmark_node.cpp.o"
 )
 

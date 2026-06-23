@@ -1,4 +1,4 @@
-prefix=/home/gdut/catkin_roscar/install
+prefix=/home/cbh/ROS-Car/install
 
 Name: traffic_light_yolo
 Description: Description of traffic_light_yolo

@@ -1,8 +1,8 @@
-# Install script for directory: /home/gdut/catkin_roscar/src/rplidar_ros
+# Install script for directory: /home/cbh/ROS-Car/src/rplidar_ros
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/gdut/catkin_roscar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/cbh/ROS-Car/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,34 +38,34 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/rplidar_ros" TYPE FILE FILES "/home/gdut/catkin_roscar/devel/include/rplidar_ros/paramsConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/rplidar_ros" TYPE FILE FILES "/home/cbh/ROS-Car/devel/include/rplidar_ros/paramsConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/rplidar_ros" TYPE FILE FILES "/home/gdut/catkin_roscar/devel/lib/python3/dist-packages/rplidar_ros/__init__.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/rplidar_ros" TYPE FILE FILES "/home/cbh/ROS-Car/devel/lib/python3/dist-packages/rplidar_ros/__init__.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/gdut/catkin_roscar/devel/lib/python3/dist-packages/rplidar_ros/cfg")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/cbh/ROS-Car/devel/lib/python3/dist-packages/rplidar_ros/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/rplidar_ros" TYPE DIRECTORY FILES "/home/gdut/catkin_roscar/devel/lib/python3/dist-packages/rplidar_ros/cfg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/rplidar_ros" TYPE DIRECTORY FILES "/home/cbh/ROS-Car/devel/lib/python3/dist-packages/rplidar_ros/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gdut/catkin_roscar/build/rplidar_ros/catkin_generated/installspace/rplidar_ros.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/cbh/ROS-Car/build/rplidar_ros/catkin_generated/installspace/rplidar_ros.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_ros/cmake" TYPE FILE FILES
-    "/home/gdut/catkin_roscar/build/rplidar_ros/catkin_generated/installspace/rplidar_rosConfig.cmake"
-    "/home/gdut/catkin_roscar/build/rplidar_ros/catkin_generated/installspace/rplidar_rosConfig-version.cmake"
+    "/home/cbh/ROS-Car/build/rplidar_ros/catkin_generated/installspace/rplidar_rosConfig.cmake"
+    "/home/cbh/ROS-Car/build/rplidar_ros/catkin_generated/installspace/rplidar_rosConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_ros" TYPE FILE FILES "/home/gdut/catkin_roscar/src/rplidar_ros/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_ros" TYPE FILE FILES "/home/cbh/ROS-Car/src/rplidar_ros/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -75,7 +75,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNode"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros" TYPE EXECUTABLE FILES "/home/gdut/catkin_roscar/devel/lib/rplidar_ros/rplidarNode")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros" TYPE EXECUTABLE FILES "/home/cbh/ROS-Car/devel/lib/rplidar_ros/rplidarNode")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNode" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNode")
     file(RPATH_CHANGE
@@ -95,7 +95,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNodeClient"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros" TYPE EXECUTABLE FILES "/home/gdut/catkin_roscar/devel/lib/rplidar_ros/rplidarNodeClient")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros" TYPE EXECUTABLE FILES "/home/cbh/ROS-Car/devel/lib/rplidar_ros/rplidarNodeClient")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNodeClient" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNodeClient")
     file(RPATH_CHANGE
@@ -110,9 +110,9 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_ros" TYPE DIRECTORY FILES
-    "/home/gdut/catkin_roscar/src/rplidar_ros/launch"
-    "/home/gdut/catkin_roscar/src/rplidar_ros/rviz"
-    "/home/gdut/catkin_roscar/src/rplidar_ros/sdk"
+    "/home/cbh/ROS-Car/src/rplidar_ros/launch"
+    "/home/cbh/ROS-Car/src/rplidar_ros/rviz"
+    "/home/cbh/ROS-Car/src/rplidar_ros/sdk"
     USE_SOURCE_PERMISSIONS)
 endif()
 
