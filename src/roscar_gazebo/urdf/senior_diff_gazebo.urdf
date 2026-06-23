@@ -63,9 +63,9 @@
   <!--  Front = passive caster                       -->
   <!-- ============================================= -->
 
-  <!-- - - - - Left wheel - - - - -->
+  <!-- - - - - Left wheel (差速驱动) - - - - -->
   <joint name="left_wheel_joint" type="continuous">
-    <origin xyz="0 0.165 0.05" rpy="1.57 0 0"/>
+    <origin xyz="0 0.165 0.05" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child  link="left_wheel_link"/>
     <axis xyz="0 1 0"/>
@@ -80,7 +80,7 @@
     </inertial>
 
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
         <cylinder radius="0.05" length="0.04"/>
       </geometry>
@@ -88,16 +88,16 @@
     </visual>
 
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
         <cylinder radius="0.05" length="0.04"/>
       </geometry>
     </collision>
   </link>
 
-  <!-- - - - - Right wheel - - - - -->
+  <!-- - - - - Right wheel (差速驱动) - - - - -->
   <joint name="right_wheel_joint" type="continuous">
-    <origin xyz="0 -0.165 0.05" rpy="1.57 0 0"/>
+    <origin xyz="0 -0.165 0.05" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child  link="right_wheel_link"/>
     <axis xyz="0 1 0"/>
@@ -112,7 +112,7 @@
     </inertial>
 
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
         <cylinder radius="0.05" length="0.04"/>
       </geometry>
@@ -120,16 +120,16 @@
     </visual>
 
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
         <cylinder radius="0.05" length="0.04"/>
       </geometry>
     </collision>
   </link>
 
-  <!-- - - - - Front caster (passive, no drive) - - - - -->
+  <!-- - - - - Front caster (万向轮，无驱动) - - - - -->
   <joint name="front_wheel_joint" type="continuous">
-    <origin xyz="0.23 0 0.05" rpy="1.57 0 0"/>
+    <origin xyz="0.23 0 0.05" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child  link="front_wheel_link"/>
     <axis xyz="0 1 0"/>
@@ -144,7 +144,7 @@
     </inertial>
 
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
         <cylinder radius="0.05" length="0.04"/>
       </geometry>
@@ -152,7 +152,7 @@
     </visual>
 
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
         <cylinder radius="0.05" length="0.04"/>
       </geometry>
