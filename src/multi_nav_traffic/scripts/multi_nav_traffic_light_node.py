@@ -38,8 +38,9 @@ import actionlib
 import collections
 
 from sensor_msgs.msg import LaserScan, Image
-from std_msgs.msg import String, Float32
+from std_msgs.msg import String, Float32, ColorRGBA
 from geometry_msgs.msg import PointStamped, Twist
+from visualization_msgs.msg import Marker, MarkerArray
 from std_srvs.srv import Trigger, TriggerResponse
 from cv_bridge import CvBridge
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
@@ -161,6 +162,7 @@ class MultiNavTrafficLightNode:
         self.pub_distance = rospy.Publisher("/traffic_light_distance", Float32, queue_size=10)
         self.pub_nav      = rospy.Publisher("/nav_state",             String,  queue_size=10)
         self.pub_cmd_vel  = rospy.Publisher("/cmd_vel",               Twist,   queue_size=10)
+        self.pub_waypoints = rospy.Publisher("/waypoint_markers", MarkerArray, queue_size=1)
 
         # ---- Services ----
         rospy.Service("/start_multi_nav",  Trigger, self.srv_start_nav)
@@ -198,6 +200,7 @@ class MultiNavTrafficLightNode:
             x, y = msg.point.x, msg.point.y
             self.waypoints.append((x, y))
             rospy.loginfo("  [WP %d]  (%.2f,  %.2f)", len(self.waypoints), x, y)
+            self._publish_waypoint_markers()
 
     # ================================================================
     #  Service callbacks
@@ -223,8 +226,71 @@ class MultiNavTrafficLightNode:
         self._red_entry_count = 0
         self.goal_cancelled = False
         self._hold_robot()
+        self._publish_waypoint_markers(clear=True)
         rospy.loginfo("Waypoints cleared. State -> IDLE")
         return TriggerResponse(success=True, message="Cleared")
+
+    # ================================================================
+    #  Waypoint visualization markers
+    # ================================================================
+    def _publish_waypoint_markers(self, clear=False):
+        """Publish MarkerArray so RViz shows all collected waypoints."""
+        markers = MarkerArray()
+        if not clear:
+            for i, (x, y) in enumerate(self.waypoints):
+                m = Marker()
+                m.header.frame_id = "map"
+                m.header.stamp = rospy.Time.now()
+                m.ns = "waypoints"
+                m.id = i
+                m.type = Marker.SPHERE
+                m.action = Marker.ADD
+                m.pose.position.x = x
+                m.pose.position.y = y
+                m.pose.position.z = 0.05
+                m.scale.x = 0.15
+                m.scale.y = 0.15
+                m.scale.z = 0.15
+                m.color.r = 0.0
+                m.color.g = 1.0
+                m.color.b = 0.0
+                m.color.a = 0.8
+                m.lifetime = rospy.Duration(0)  # permanent
+                markers.markers.append(m)
+
+                # Label text
+                t = Marker()
+                t.header.frame_id = "map"
+                t.header.stamp = rospy.Time.now()
+                t.ns = "waypoint_labels"
+                t.id = i + 1000
+                t.type = Marker.TEXT_VIEW_FACING
+                t.action = Marker.ADD
+                t.pose.position.x = x
+                t.pose.position.y = y
+                t.pose.position.z = 0.3
+                t.scale.z = 0.2
+                t.text = str(i + 1)
+                t.color.r = 1.0
+                t.color.g = 1.0
+                t.color.b = 1.0
+                t.color.a = 1.0
+                t.lifetime = rospy.Duration(0)
+                markers.markers.append(t)
+        # Delete old markers on clear
+        else:
+            m = Marker()
+            m.header.frame_id = "map"
+            m.ns = "waypoints"
+            m.action = Marker.DELETEALL
+            markers.markers.append(m)
+            m = Marker()
+            m.header.frame_id = "map"
+            m.ns = "waypoint_labels"
+            m.action = Marker.DELETEALL
+            markers.markers.append(m)
+
+        self.pub_waypoints.publish(markers)
 
     # ================================================================
     #  YOLO image callback
@@ -411,18 +477,21 @@ class MultiNavTrafficLightNode:
                 return
             self._send_waypoint_goal()
 
-        # --- Goal failed -> retry ---
+        # --- Still navigating -> watch for red ---
+        elif status in (actionlib.GoalStatus.ACTIVE, actionlib.GoalStatus.PENDING):
+            pass
+
+        # --- Failed (not cancelled by us) -> retry ---
         elif status in (actionlib.GoalStatus.ABORTED,
-                        actionlib.GoalStatus.REJECTED,
-                        actionlib.GoalStatus.RECALLED):
+                        actionlib.GoalStatus.REJECTED):
             if not self.goal_cancelled:
                 rospy.logwarn("Goal %d failed (code=%d), retrying ...",
                               self.current_wp_idx + 1, status)
                 self._send_waypoint_goal()
             self.goal_cancelled = False
 
-        # --- No active goal -> send one ---
-        elif not self.move_base_client.simple_state:
+        # --- No goal / LOST / RECALLED / PREEMPTING -> send one ---
+        else:
             self._send_waypoint_goal()
 
         # ---- Improved: red entry debouncing ----
