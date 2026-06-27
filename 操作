@@ -1,4 +1,4 @@
-roslaunch roscar_gazebo nav.launch
+roslaunch multi_nav_traffic nav.launch
 
 rosservice call /clear_waypoints 
 
