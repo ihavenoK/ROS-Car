@@ -37,8 +37,8 @@ TebLocalPlannerROS:
 
   #目标点误差
   xy_goal_tolerance: 0.3
-  yaw_goal_tolerance: 0.2
-  free_goal_vel: False
+  yaw_goal_tolerance: 6.28           # 不管最终朝向，只要求位置到达
+  free_goal_vel: True                # 以当前速度通过，不刹停再起步
 
   #轨迹配置
   teb_autosize: True
