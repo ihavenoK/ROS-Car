@@ -1,2 +1,2 @@
-roscar_gazebo
--DCATKIN_DEVEL_PREFIX=/home/cbh/ROS-Car/devel -DCMAKE_INSTALL_PREFIX=/home/cbh/ROS-Car/install -DCATKIN_WHITELIST_PACKAGES=roscar_gazebo -G Unix Makefiles
+multi_nav_traffic:roscar_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/cbh/ROS-Car/devel -DCMAKE_INSTALL_PREFIX=/home/cbh/ROS-Car/install -DCATKIN_WHITELIST_PACKAGES=multi_nav_traffic;roscar_gazebo -G Unix Makefiles
