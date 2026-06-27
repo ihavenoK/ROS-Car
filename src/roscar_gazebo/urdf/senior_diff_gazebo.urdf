@@ -325,6 +325,7 @@
       </ray>
       <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
         <rosDebugLevel>na</rosDebugLevel>
+        <alwaysOn>true</alwaysOn>
         <topicName>scan</topicName>
         <frameName>laser</frameName>
       </plugin>
