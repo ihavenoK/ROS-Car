@@ -70,6 +70,8 @@
     <param name="green_confirm_frames"  value="5"/>
     <param name="red_debounce_frames"   value="3"/>
     <param name="confidence_threshold"  value="0.5"/>
+    <param name="use_mock_detection"    value="true"/>   <!-- 仿真：绕过YOLO，用mock数据 -->
+    <param name="show_detection_window" value="false"/>  <!-- 仿真：不弹OpenCV窗口 -->
   </node>
 
 </launch>

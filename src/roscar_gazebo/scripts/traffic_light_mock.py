@@ -53,9 +53,9 @@ class TrafficLightMock:
         rospy.Subscriber("/gazebo/model_states", ModelStates, self.cb_states)
         rospy.Subscriber("/manual_traffic_light", String, self.cb_manual)
 
-        # 发布
-        self.pub_status   = rospy.Publisher("/traffic_light_status",  String,  queue_size=10)
-        self.pub_distance  = rospy.Publisher("/traffic_light_distance", Float32, queue_size=10)
+        # 发布（专用话题，multi_nav 通过 ~use_mock 参数订阅）
+        self.pub_status   = rospy.Publisher("/mock_traffic_light_status",  String,  queue_size=10)
+        self.pub_distance  = rospy.Publisher("/mock_traffic_light_distance", Float32, queue_size=10)
 
         self.rate = rospy.Rate(RATE)
         rospy.loginfo("TrafficLightMock ready. Lights: %s", list(TRAFFIC_LIGHTS.keys()))

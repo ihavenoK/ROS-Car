@@ -104,6 +104,8 @@ class MultiNavTrafficLightNode:
         self.max_approach_vel   = rospy.get_param("~max_approach_vel",      0.3)
         self.creep_vel          = rospy.get_param("~creep_vel",             0.05)
         self.safety_margin      = rospy.get_param("~safety_margin",         0.2)
+        self.use_mock_detection = rospy.get_param("~use_mock_detection",   False)
+        self.show_window        = rospy.get_param("~show_detection_window", True)
 
         self.fx = rospy.get_param("~fx", 400.0)
         self.fy = rospy.get_param("~fy", 400.0)
@@ -156,6 +158,12 @@ class MultiNavTrafficLightNode:
         rospy.Subscriber("/clicked_point",      PointStamped, self.cb_clicked_point)
         rospy.Subscriber("/usb_cam/image_raw",  Image,        self.cb_image)
         rospy.Subscriber("/scan",               LaserScan,    self.cb_scan)
+
+        # ---- Mock detection subscribers (simulation) ----
+        if self.use_mock_detection:
+            rospy.Subscriber("/mock_traffic_light_status",  String,  self.cb_mock_status)
+            rospy.Subscriber("/mock_traffic_light_distance", Float32, self.cb_mock_distance)
+            rospy.loginfo("Using MOCK traffic light detection (bypassing YOLO)")
 
         # ---- Publishers ----
         self.pub_status   = rospy.Publisher("/traffic_light_status",   String,  queue_size=10)
@@ -214,6 +222,7 @@ class MultiNavTrafficLightNode:
         self.state = self.NAVIGATING
         self.goal_cancelled = False
         rospy.loginfo("=== Multi-nav START: %d waypoints ===", len(self.waypoints))
+        self._send_waypoint_goal()  # 立即发第一个点，防止旧 SUCCEEDED 状态被误判
         return TriggerResponse(success=True, message="Nav started")
 
     def srv_clear_waypoints(self, _req):
@@ -388,8 +397,9 @@ class MultiNavTrafficLightNode:
         self.latest_frame = frame.copy()
         self.pub_status.publish(String(self.detected_class or "none"))
 
-        cv2.imshow("Traffic Light Detection", frame)
-        cv2.waitKey(1)
+        if self.show_window:
+            cv2.imshow("Traffic Light Detection", frame)
+            cv2.waitKey(1)
 
     # ================================================================
     #  LiDAR scan callback
@@ -436,6 +446,17 @@ class MultiNavTrafficLightNode:
 
         self.light_distance = self._dist_filtered
         self.pub_distance.publish(Float32(self.light_distance))
+
+    # ================================================================
+    #  Mock detection callbacks (simulation, bypass YOLO)
+    # ================================================================
+    def cb_mock_status(self, msg):
+        self.detected_class = msg.data if msg.data != "none" else None
+        rospy.logdebug("Mock status: %s", msg.data)
+
+    def cb_mock_distance(self, msg):
+        self.light_distance = msg.data
+        rospy.logdebug("Mock distance: %.2f", msg.data)
 
     # ================================================================
     #  State machine (10 Hz)
