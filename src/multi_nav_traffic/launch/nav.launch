@@ -1,0 +1,52 @@
+<launch>
+  <!-- ========================================================== -->
+  <!--  真车多点导航 + 红绿灯识别                                 -->
+  <!--  依赖：start_roscar + map_server + AMCL + move_base         -->
+  <!--        + multi_nav_traffic_light_node (YOLO 真实检测)       -->
+  <!-- ========================================================== -->
+
+  <!-- 1. 真车底层 + 地图 + 定位 + 路径规划（已有） -->
+  <include file="$(find start_roscar)/launch/navigation.launch" />
+
+  <!-- 2. 多点导航 + 红绿灯识别（YOLO + LiDAR 融合） -->
+  <node pkg="multi_nav_traffic" type="multi_nav_traffic_light_node.py"
+        name="multi_nav_traffic_light" output="screen">
+
+    <!-- 模式 -->
+    <param name="use_mock_detection"    value="false"/>  <!-- 真车：YOLO 检测 -->
+    <param name="show_detection_window" value="true"/>    <!-- 显示检测画面 -->
+
+    <!-- YOLO -->
+    <param name="model_path" value="$(find multi_nav_traffic)/model/best_new.pt"/>
+    <param name="gamma"      value="1.5"/>              <!-- 室外强光压暗 -->
+    <param name="confidence_threshold" value="0.5"/>
+
+    <!-- TF帧（真车命名） -->
+    <param name="camera_frame" value="camera_link"/>
+    <param name="laser_frame"  value="laser"/>
+    <param name="robot_frame"  value="base_footprint"/>
+
+    <!-- 红灯制动 -->
+    <param name="stop_distance"    value="3.0"/>
+    <param name="hold_distance"    value="1.5"/>
+    <param name="safety_margin"    value="0.2"/>
+    <param name="max_approach_vel" value="0.3"/>
+    <param name="creep_vel"        value="0.05"/>
+
+    <!-- 去抖 -->
+    <param name="red_debounce_frames"  value="3"/>
+    <param name="green_confirm_frames" value="5"/>
+    <param name="red_wait_timeout"     value="30.0"/>
+
+    <!-- 距离滤波 -->
+    <param name="angle_tolerance"        value="2.0"/>
+    <param name="distance_filter_window" value="5"/>
+
+    <!-- 相机内参 -->
+    <param name="fx" value="400.0"/>
+    <param name="fy" value="400.0"/>
+    <param name="cx" value="320.0"/>
+    <param name="cy" value="240.0"/>
+  </node>
+
+</launch>
