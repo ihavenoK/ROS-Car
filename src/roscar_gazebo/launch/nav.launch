@@ -1,0 +1,75 @@
+<launch>
+  <!-- ========================================================== -->
+  <!--  仿真导航 — 加载地图 + 定位 + move_base + 多点红绿灯        -->
+  <!-- ========================================================== -->
+
+  <param name="use_sim_time" value="true"/>
+
+  <!-- 1. 仿真环境（Gazebo + 小车 + 传感器） -->
+  <include file="$(find roscar_gazebo)/launch/simulation.launch"/>
+
+  <!-- 2. 地图服务器 -->
+  <node pkg="map_server" type="map_server" name="map_server"
+        args="$(find roscar_gazebo)/map/roscar_map.yaml" output="screen"/>
+
+  <!-- 3. AMCL 定位（仿真用 odom，不用真车的 odom_combined） -->
+  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+    <remap from="scan" to="/scan"/>
+
+    <param name="odom_frame_id"         value="odom"/>
+    <param name="base_frame_id"         value="base_footprint"/>
+    <param name="odom_model_type"       value="diff-corrected"/>
+
+    <param name="min_particles"         value="500"/>
+    <param name="max_particles"         value="2000"/>
+    <param name="kld_err"               value="0.05"/>
+    <param name="kld_z"                 value="0.99"/>
+    <param name="update_min_d"          value="0.25"/>
+    <param name="update_min_a"          value="0.2"/>
+    <param name="resample_interval"     value="1"/>
+    <param name="transform_tolerance"   value="1.0"/>
+
+    <param name="laser_max_range"       value="12.0"/>
+    <param name="laser_max_beams"       value="60"/>
+    <param name="laser_model_type"      value="likelihood_field"/>
+
+    <param name="gui_publish_rate"      value="10.0"/>
+  </node>
+
+  <!-- 4. move_base 路径规划 -->
+  <node pkg="move_base" type="move_base" name="move_base" output="screen">
+    <rosparam command="load" file="$(find start_roscar)/param/move_base_params.yaml"/>
+    <rosparam command="load" file="$(find start_roscar)/param/global_costmap_params.yaml"/>
+    <rosparam command="load" file="$(find start_roscar)/param/local_costmap_params.yaml"/>
+    <rosparam command="load" file="$(find start_roscar)/param/costmap_common_params.yaml"/>
+    <rosparam command="load" file="$(find start_roscar)/param/base_global_planner_param.yaml"/>
+    <rosparam command="load" file="$(find start_roscar)/param/teb_local_planner_params.yaml"/>
+
+    <param name="base_global_planner"   value="navfn/NavfnROS"/>
+    <param name="base_local_planner"    value="teb_local_planner/TebLocalPlannerROS"/>
+    <param name="controller_frequency"  value="10.0"/>
+  </node>
+
+  <!-- 5. 红绿灯模拟（方案 A：绕过 YOLO） -->
+  <node pkg="roscar_gazebo" type="traffic_light_mock.py"
+        name="traffic_light_mock" output="screen"/>
+
+  <!-- 6. 多点导航 + 红绿灯控制 -->
+  <node pkg="multi_nav_traffic" type="multi_nav_traffic_light_node.py"
+        name="multi_nav_traffic_light" output="screen">
+    <param name="model_path"            value="$(find multi_nav_traffic)/model/best_new.pt"/>
+    <param name="gamma"                 value="1.5"/>
+    <param name="camera_frame"          value="camera_link"/>
+    <param name="laser_frame"           value="laser"/>
+    <param name="robot_frame"           value="base_footprint"/>
+    <param name="stop_distance"         value="3.0"/>
+    <param name="hold_distance"         value="1.5"/>
+    <param name="safety_margin"         value="0.2"/>
+    <param name="max_approach_vel"      value="0.3"/>
+    <param name="creep_vel"             value="0.05"/>
+    <param name="green_confirm_frames"  value="5"/>
+    <param name="red_debounce_frames"   value="3"/>
+    <param name="confidence_threshold"  value="0.5"/>
+  </node>
+
+</launch>
