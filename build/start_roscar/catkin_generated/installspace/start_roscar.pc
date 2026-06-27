@@ -1,8 +1,0 @@
-prefix=/home/cbh/ROS-Car/install
-
-Name: start_roscar
-Description: Description of start_roscar
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,0 +1,12 @@
+# 手动设红灯（小车接近时会刹停）
+rostopic pub /manual_traffic_light std_msgs/String "data: 'red'"
+
+# 手动设绿灯（小车恢复导航）
+rostopic pub /manual_traffic_light std_msgs/String "data: 'green'"
+
+# 切回自动模式（15秒红绿循环）
+rostopic pub /manual_traffic_light std_msgs/String "data: 'auto'"
+
+rosservice call /clear_waypoints 
+rosservice call /start_multi_nav
+
