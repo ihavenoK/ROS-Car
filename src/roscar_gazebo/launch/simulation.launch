@@ -9,8 +9,7 @@
   <param name="robot_description"
          textfile="$(find roscar_gazebo)/urdf/senior_diff_gazebo.urdf"/>
 
-  <!-- 2. 发布 joint states + TF -->
-  <node name="joint_state_publisher"  pkg="joint_state_publisher"  type="joint_state_publisher"/>
+  <!-- 2. 发布 TF（关节状态由 diff_drive 插件提供，不用 joint_state_publisher 避免 TF 重复）-->
   <node name="robot_state_publisher"  pkg="robot_state_publisher"  type="robot_state_publisher"/>
 
   <!-- 3. 启动 Gazebo 空世界 -->
